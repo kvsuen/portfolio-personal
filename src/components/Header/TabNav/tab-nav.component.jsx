@@ -16,16 +16,24 @@ const TabNav = ({ aboutRef, projectsRef, scrollToRef }) => {
 
   useScrollPosition(
     ({ prevPos, currPos }) => {
-      if (Math.abs(currPos.y) > aboutRef.current.getBoundingClientRect().height) {
-        setValue(1)
-      } else {
-        setValue(0)
+      if (
+        Math.abs(currPos.y) >=
+          aboutRef.current.getBoundingClientRect().height &&
+        Math.abs(prevPos.y) < aboutRef.current.getBoundingClientRect().height
+      ) {
+        setValue(1);
+      } else if (
+        Math.abs(currPos.y) <=
+          aboutRef.current.getBoundingClientRect().height &&
+        Math.abs(prevPos.y) > aboutRef.current.getBoundingClientRect().height
+      ) {
+        setValue(0);
       }
     },
     null,
     null,
     false,
-    // 100
+    100
   );
 
   return (
