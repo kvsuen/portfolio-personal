@@ -25,7 +25,7 @@ const TabNav = ({ aboutRef, projectsRef, scrollToRef }) => {
     null,
     null,
     false,
-    300
+    // 100
   );
 
   return (

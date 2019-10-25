@@ -4,7 +4,7 @@ const bp = '768';
 
 export default makeStyles(theme => ({
   nav: {
-    backgroundColor: '#f9fcff',
+    backgroundColor: 'transparent',
     color: '#17252A',
     padding: '0 2.5rem',
     marginTop: '15px'
