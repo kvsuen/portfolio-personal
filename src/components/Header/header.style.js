@@ -1,17 +1,18 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 const bp = '768';
+const fontColor = '#17252A'
 
 export default makeStyles(theme => ({
   nav: {
     backgroundColor: 'transparent',
-    color: '#17252A',
+    color: fontColor,
     padding: '0 2.5rem',
     marginTop: '15px'
   },
   navElevated: {
     backgroundColor: '#f9fcff',
-    color: '#17252A',
+    color: fontColor,
     padding: '0 2.5rem',
     boxShadow: `
       0px 5px 4px -4px rgba(0,0,0,0.2), 
@@ -48,13 +49,13 @@ export default makeStyles(theme => ({
     [theme.breakpoints.down(bp)]: {
       display: 'none'
     },
-    color: '#17252A',
     margin: 'auto 10px'
   },
   menuButton: {
     [theme.breakpoints.up(bp)]: {
       display: 'none'
     },
-    padding: '0'
+    padding: '0',
+    color: fontColor
   }
 }));

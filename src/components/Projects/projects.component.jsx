@@ -1,10 +1,12 @@
 import React from 'react';
 
-import './projects.style.css';
+import useStyles from './projects.style';
 
 const Projects = ({ refProp }) => {
+  const classes = useStyles();
+
   return (
-    <section id="projects" ref={refProp}>
+    <section id="projects" ref={refProp} className={classes.root}>
       Projects
     </section>
   );
