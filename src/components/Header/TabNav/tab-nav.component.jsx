@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
+import { useScrollPosition } from '../../../hooks/useScrollPosition';
 
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 
-import useStyles from './tab-nav.style'
+import useStyles from './tab-nav.style';
 
 const TabNav = ({ aboutRef, projectsRef, scrollToRef }) => {
   const classes = useStyles();
@@ -13,10 +14,32 @@ const TabNav = ({ aboutRef, projectsRef, scrollToRef }) => {
     setValue(newValue);
   };
 
+  useScrollPosition(
+    ({ prevPos, currPos }) => {
+      if (Math.abs(currPos.y) > aboutRef.current.getBoundingClientRect().height) {
+        setValue(1)
+      } else {
+        setValue(0)
+      }
+    },
+    null,
+    null,
+    false,
+    300
+  );
+
   return (
     <Tabs value={value} onChange={handleChange} indicatorColor={'primary'}>
-      <Tab label="About" className={classes.tab} onClick={() => scrollToRef(aboutRef)}/>
-      <Tab label="Projects" className={classes.tab} onClick={() => scrollToRef(projectsRef)}/>
+      <Tab
+        label="About"
+        className={classes.tab}
+        onClick={() => scrollToRef(aboutRef)}
+      />
+      <Tab
+        label="Projects"
+        className={classes.tab}
+        onClick={() => scrollToRef(projectsRef)}
+      />
     </Tabs>
   );
 };

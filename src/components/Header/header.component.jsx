@@ -9,7 +9,6 @@ import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import Fade from '@material-ui/core/Fade';
 
 import useStyles from './header.style';
-import { classDeclaration } from '@babel/types';
 
 const Header = ({ aboutRef, projectsRef }) => {
   const classes = useStyles();
