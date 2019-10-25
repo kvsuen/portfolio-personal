@@ -2,9 +2,9 @@ import React from 'react';
 
 import './about.style.css';
 
-const About = () => {
+const About = ({ refProp }) => {
   return (
-    <section id="about">
+    <section id="about" ref={refProp}>
       About
     </section>
   );

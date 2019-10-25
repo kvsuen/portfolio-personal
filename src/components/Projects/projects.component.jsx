@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Projects = () => {
+const Projects = ({ refProp }) => {
   return (
-    <section id="projects">
+    <section id="projects" ref={refProp}>
       Projects
     </section>
   );
