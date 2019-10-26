@@ -37,6 +37,9 @@ export default makeStyles(theme => ({
     maxWidth: '60rem',
     padding: '0',
     marginBottom: '50px',
+    '@media (min-width:1921px)': {
+      maxWidth: '85%'
+    }
   },
   cardsContainer: {
     display: 'flex',
