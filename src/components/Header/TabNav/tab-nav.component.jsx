@@ -28,6 +28,11 @@ const TabNav = ({ aboutRef, projectsRef, scrollToRef }) => {
         Math.abs(prevPos.y) > aboutRef.current.getBoundingClientRect().height
       ) {
         setValue(0);
+      } else if (Math.abs(currPos.y) <=
+      aboutRef.current.getBoundingClientRect().height &&
+      Math.abs(prevPos.y) === aboutRef.current.getBoundingClientRect().height
+      ) {
+        setValue(0);
       }
     },
     null,

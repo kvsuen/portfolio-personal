@@ -19,14 +19,12 @@ function App() {
   const projectsRef = useRef(null);
 
   return (
-    <div>
-      <ThemeProvider theme={theme}>
-        <Header aboutRef={aboutRef} projectsRef={projectsRef} />
-        <About refProp={aboutRef} />
-        <Projects refProp={projectsRef} />
-        <Footer />
-      </ThemeProvider>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Header aboutRef={aboutRef} projectsRef={projectsRef} />
+      <About refProp={aboutRef} />
+      <Projects refProp={projectsRef} />
+      <Footer />
+    </ThemeProvider>
   );
 }
 
