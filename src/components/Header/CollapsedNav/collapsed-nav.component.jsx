@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
+import { MdMenu } from 'react-icons/md'
 
 const CollapsedNav = ({ aboutRef, projectsRef, scrollToRef }) => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -26,7 +26,7 @@ const CollapsedNav = ({ aboutRef, projectsRef, scrollToRef }) => {
         aria-label="menu"
         onClick={handleMenu}
       >
-        <MenuIcon />
+        <MdMenu />
       </IconButton>
       <Menu
         id="simple-menu"

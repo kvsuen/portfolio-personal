@@ -10,11 +10,12 @@ const Projects = ({ refProp }) => {
   const classes = useStyles();
 
   const projects = projectContent.map(project => {
-    const { id, imageURL, projectTitle, projectDescription, stack } = project;
+    const { id, imageURL, github, projectTitle, projectDescription, stack } = project;
     return (
       <ProjectCard
         key={id}
         imageURL={imageURL}
+        github={github}
         projectTitle={projectTitle}
         projectDescription={projectDescription}
         stack={stack}
@@ -25,9 +26,10 @@ const Projects = ({ refProp }) => {
   return (
     <section id="projects" ref={refProp} className={classes.root}>
       <div className={classes.container}>
-        <Typography variant="h2" color="textPrimary" className={classes.title}>
+        <Typography variant="h3" color="textPrimary" className={classes.title}>
           PROJECTS
         </Typography>
+        <div className={classes.titleBar}></div>
         <div className={classes.cardsContainer}>
           {projects}
         </div>
