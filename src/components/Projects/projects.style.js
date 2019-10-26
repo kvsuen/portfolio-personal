@@ -20,12 +20,12 @@ export default makeStyles(theme => ({
   },
   title: {
     fontFamily: 'Raleway, sans-serif',
-    fontWeight: '700',
+    fontWeight: '300',
     margin: '75px auto 25px auto'
   },
   titleBar: {
     height: '0px',
-    border: `2px solid ${fontColor}`,
+    border: `1px solid ${fontColor}`,
     width: '7.5%',
     marginBottom: '10px'
   },
@@ -37,7 +37,7 @@ export default makeStyles(theme => ({
     maxWidth: '60rem',
     padding: '0',
     marginBottom: '50px',
-    '@media (min-width:1921px)': {
+    '@media (min-width:2200px)': {
       maxWidth: '85%'
     }
   },
@@ -51,5 +51,11 @@ export default makeStyles(theme => ({
       flexWrap: 'wrap',
       justifyContent: 'center'
     },
+    '& > div': {
+      '@media (min-width:2200px)': {
+        width: '40%',
+        margin: '1rem'
+      },
+    }
   }
 }));
