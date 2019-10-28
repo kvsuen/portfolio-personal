@@ -9,6 +9,10 @@ export default makeStyles(theme => ({
     fontFamily: 'Raleway, sans-serif',
     display: 'flex',
     justifyContent: 'center',
-    marginBottom: '5px'
+    marginBottom: '5px',
+    // position: 'absolute',
+    // bottom: '-100vh',
+    // left: '50%',
+    // marginLeft: '70px'
   }
 }));

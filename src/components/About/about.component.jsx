@@ -52,7 +52,8 @@ const About = ({ refProp }) => {
           className={classes.subText}
         >
           I'm a full stack developer who is passionate about learning, creating
-          impactful applications, and all things coding.
+          impactful applications, and all things coding. My core competencies
+          include Node.js, React/Redux, Ruby on Rails, and Python.
         </Typography>
 
         <div className={classes.links}>

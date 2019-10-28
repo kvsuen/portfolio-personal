@@ -51,6 +51,7 @@ const ModalCard = ({
             alt={projectTitle}
             image={imageURL}
             title={projectTitle}
+            className={classes.image}
           />
           <CardContent>
             <Typography

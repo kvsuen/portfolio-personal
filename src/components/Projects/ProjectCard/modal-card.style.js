@@ -33,6 +33,9 @@ export default makeStyles(theme => ({
       width: '50%'
     }
   },
+  image: {
+    borderBottom: '2px solid black'
+  },
   title: {
     color: fontColor,
     display: 'flex',

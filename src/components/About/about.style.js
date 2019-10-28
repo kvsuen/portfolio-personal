@@ -41,7 +41,10 @@ export default makeStyles(theme => ({
   subText: {
     fontWeight: '300',
     color: fontColor,
-    marginTop: '15px'
+    marginTop: '15px',
+    '@media (max-width:420px)': {
+      fontSize: '1rem'
+    },
   },
   links: {
     marginTop: '15px',
